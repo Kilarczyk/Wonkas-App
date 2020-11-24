@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/workersListFragment">
+
+    <fragment
+        android:id="@+id/workersListFragment"
+        android:name="com.kamil.androidtest.ui.workersList.WorkerListFragment"
+        android:label="fragment_workers_list"
+        tools:layout="@layout/fragment_worker_list">
+        <action
+            android:id="@+id/action_workersListFragment_to_workerDetailedInfoFragment"
+            app:destination="@id/workerDetailedInfoFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/workerDetailedInfoFragment"
+        android:name="com.kamil.androidtest.ui.workersInfo.WorkerDetailedInfoFragment"
+        android:label="fragment_worker_detailed_info"
+        tools:layout="@layout/fragment_workers_detailed_info">
+
+    </fragment>
+</navigation>

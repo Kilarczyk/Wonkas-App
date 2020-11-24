@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.kamil.androidtest.ui.workersList.WorkerViewModel"/>
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:cardBackgroundColor="@color/lightBlack"
+        app:cardCornerRadius="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/movieLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/worker_image"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+                app:imageUrl="@{viewModel.image}"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/name_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/name_txt"
+                android:textColor="@color/whiteDark"
+                app:layout_constraintTop_toTopOf="@id/worker_image"
+                app:layout_constraintStart_toEndOf="@id/worker_image"
+                app:layout_constraintEnd_toStartOf="@id/worker_name"/>
+
+            <TextView
+                android:id="@+id/worker_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textAlignment="textStart"
+                android:gravity="start"
+                android:text= "@{viewModel.name}"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@id/name_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/name_txt"
+                app:layout_constraintBottom_toBottomOf="@id/name_txt"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/last_name_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:text="@string/surname_txt"
+                android:textColor="@color/whiteDark"
+                app:layout_constraintTop_toBottomOf="@id/name_txt"
+                app:layout_constraintBottom_toBottomOf="@id/worker_image"
+                app:layout_constraintStart_toStartOf="@id/name_txt"/>
+
+            <TextView
+                android:id="@+id/worker_lastname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textAlignment="textStart"
+                android:gravity="start"
+                android:text= "@{viewModel.surname}"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@id/last_name_txt"
+                app:layout_constraintTop_toTopOf="@id/last_name_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/last_name_txt"
+                tools:ignore="RtlCompat" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

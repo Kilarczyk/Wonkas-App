@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">AndroidTest</string>
+    <string name="name_txt">Name: </string>
+    <string name="surname_txt">Surname: </string>
+    <string name="favorite_color_txt">Favorite color: </string>
+    <string name="favorite_food_txt">Favorite food: </string>
+    <string name="favorite_random_string_txt">Favorite random string: </string>
+    <string name="favorite_song_txt">Favorite song: </string>
+    <string name="gender_txt">Gender: </string>
+    <string name="profession_txt">Profession: </string>
+    <string name="email_txt">Email: </string>
+    <string name="age_txt">Age: </string>
+    <string name="country_txt">Country: </string>
+    <string name="height_txt">Height: </string>
+    <string name="search_txt">Search profession</string>
+    <string name="female_txt">F</string>
+    <string name="male_txt">M</string>
+
+</resources>
